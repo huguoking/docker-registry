@@ -1,0 +1,24 @@
+# The `common' part is automatically included (and possibly overriden by all
+# other flavors)
+common:
+    # Set a random string here
+    secret_key: d0cker_r4ndom-ke!y
+
+
+# This is the default configuration when no flavor is specified
+dev:
+    storage: local
+    storage_path: /var/docker/registry
+    loglevel: debug
+
+# To specify another flavor, set the environment variable SETTINGS_FLAVOR
+# $ export SETTINGS_FLAVOR=prod
+prod:
+    storage: local
+    storage_path: /var/docker/registry
+    loglevel: warning
+
+# This flavor is automatically used by unit tests
+test:
+    storage: local
+    storage_path: /tmp/test

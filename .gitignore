@@ -8,7 +8,6 @@
 .coverage
 .tox
 htmlcov
-config.yml
 newrelic.ini
 
 # Packages
